@@ -1,0 +1,12 @@
+body {
+  background-image: url(./sad_smile.png);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+p {
+  color: black;
+  font-size: 40;
+}

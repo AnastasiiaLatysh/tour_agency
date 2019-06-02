@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'tours/style.css' %}" />
+<html>
+<body>
+<div>
+<form class="order_form" action="{% url 'send_tourist_info' %}" method="post">
+    {% csrf_token %}
+  <fieldset class="order_form">
+    <legend>Tourist Information</legend>
+      <legend>Your chose is: {{tour_name}}</legend>
+    {{form.as_p }}
+  </fieldset>
+<p><input type="submit" value="Send" class="button"></p>
+</form>
+</div>
+</body>
+</html>

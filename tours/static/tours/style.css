@@ -1,0 +1,74 @@
+body {
+  background-color: lightblue;
+  background-image: url(./world.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: navy;
+}
+
+
+table {
+  width: 100%;
+  background-color: #c1e6ff;
+
+}
+
+th {
+  height: 50px;
+}
+
+
+table, td, th {
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+tr:hover {background-color: #d3edff;}
+
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 300;
+  height: 100;
+}
+
+.button:hover {
+  background-color: #02bfff;
+  color: white;
+}
+
+
+.order_form{
+ width: 700;
+}
+
+
+fieldset {
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border: 2px groove (internal value);
+}
+
+.backet {
+    position:absolute;
+    bottom:20;
+    right:20;
+}
