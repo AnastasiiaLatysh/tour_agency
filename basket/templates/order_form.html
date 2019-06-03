@@ -1,10 +1,11 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'tours/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'tours/buttons.css' %}" />
 <html>
 <body>
-<div>
-<form class="order_form" action="{% url 'send_tourist_info' %}" method="post">
+<div align="center">
+<form class="order_form" action="{% url 'congrats' %}" method="post">
     {% csrf_token %}
   <fieldset class="order_form">
     <legend>Tourist Information</legend>

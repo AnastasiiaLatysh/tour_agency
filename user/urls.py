@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import path
 
-from user import views
+from user.user import User
 
 urlpatterns = [
-    url(r'info/', views.User.add_info_about_user, name='send_tourist_info'),
+    path(r'congrats/', User().add_info_about_user, name='congrats'),
 ]

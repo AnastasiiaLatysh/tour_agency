@@ -23,17 +23,19 @@
         <td align="center">{{ columns.0 }}</td>
         <td align="center">{{ columns.1 }}</td>
         <td align="center">
-            <div align="left">
-            <a href="{% url 'order' %}?tour_name={{ columns.0 }}">
-                <img src="/static/basket/confirm.png" width="50" height="50">
-            </a>
-            </div>
-            <div align="right">
-            <form method='post' action="{% url 'delete_from_basket' %}">
-                {% csrf_token %}
-                <input type="hidden" value="{{ columns.0 }}" name="tour_name">
-                <input id="delete" type="submit" value="">
-            </form>
+            <div align="center">
+                <div>
+                    <a href="{% url 'order' %}?tour_name={{ columns.0 }}">
+                        <img src="/static/basket/confirm.png" width="50" height="50">
+                    </a>
+                </div>
+                <div>
+                    <form method='post' action="{% url 'delete_from_basket' %}">
+                        {% csrf_token %}
+                        <input type="hidden" value="{{ columns.0 }}" name="tour_name">
+                        <input id="delete" type="submit" value="">
+                    </form>
+                </div>
             </div>
         </td>
     </tr>

@@ -1,10 +1,17 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'tours/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'tours/buttons.css' %}" />
 <html>
 <body>
 <h1 align="center"> Hello!!! Let's choose tour of you dream ! </h1>
 <h2 align="center"> Available tours: </h2>
+<div align="center">
+    <a href="/tours/"><button class="button">All tours</button></a>
+    <a href="/tours/bus/"><button class="button">Show Bus Tours</button></a>
+    <a href="/tours/plane/"><button class="button">Show Plane Tours</button></a>
+    <a href="/tours/train/"><button class="button">Show Train Tours</button></a>
+</div>
 <form method='post' action="{% url 'add_to_basket' %}">
     {% csrf_token %}
     <table>
@@ -29,7 +36,9 @@
     {% endfor %}
 
     </table>
-    <input type="submit" value="Order tour" class="Button">
+    <div align="center">
+        <input type="submit" value="Order tour" class="button">
+    </div>
 </form>
 
 <div class="backet">

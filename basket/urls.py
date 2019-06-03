@@ -1,7 +1,8 @@
-from django.conf.urls import url
+from django.urls import path
 
-from tours import views
+from basket.basket import Basket
 
 urlpatterns = [
-    url('delete', views.Basket().delete_from_basket, name='delete_from_basket')
+    path(r'delete', Basket().delete_from_basket, name='delete_from_basket'),
+    path(r'order/', Basket().order_tour, name='order'),
 ]

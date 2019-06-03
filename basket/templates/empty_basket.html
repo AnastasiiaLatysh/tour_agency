@@ -1,12 +1,18 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'basket/empty_basket.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'tours/buttons.css' %}"/>
 <html lang="en">
 <head>
     <title>No orders</title>
 </head>
 <body>
 
-<div align="center"><p>You do not order tours. Please, return to home page and find tour of your dream !</p></div>
+<div align="center">
+    <p>You do not order tours. Please, return to home page and find tour of your dream !</p>
+</div>
+<div align="center" style="position: absolute; bottom: 0; left: 43%;">
+    <a href="/tours/"><button class="button">All tours</button></a>
+</div>
 </body>
 </html>

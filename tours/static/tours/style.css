@@ -30,26 +30,6 @@ table, td, th {
 
 tr:hover {background-color: #d3edff;}
 
-.button {
-  background-color: #008CBA;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 300;
-  height: 100;
-}
-
-.button:hover {
-  background-color: #02bfff;
-  color: white;
-}
-
 
 .order_form{
  width: 700;
