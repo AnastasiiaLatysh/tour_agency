@@ -4,7 +4,18 @@
 <link rel="stylesheet" type="text/css" href="{% static 'tours/buttons.css' %}" />
 <html>
 <body>
-<h1 align="center"> Congratulations. Tour ordered! Our administrator will contact you to specify details</h1>
+<div align="center">
+<form class="order_form" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+  <fieldset class="order_form">
+    <legend>Login</legend>
+      {{form.as_p }}
+  </fieldset>
+<p><input type="submit" value="Send" class="button"></p>
+</form>
+</div>
+
+
 <div align="center">
     <a href="/tours/"><button class="button">All tours</button></a>
 </div>

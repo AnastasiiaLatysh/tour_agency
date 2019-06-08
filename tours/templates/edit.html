@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'tours/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'tours/buttons.css' %}" />
+<html>
+<body>
+<div align="center">
+    <a href="/tours/"><button class="button">All tours</button></a>
+</div>
+<div align="center">
+    <a href="/tours/bus/"><button class="button">Show Bus Tours</button></a>
+    <a href="/tours/plane/"><button class="button">Show Plane Tours</button></a>
+    <a href="/tours/train/"><button class="button">Show Train Tours</button></a>
+</div>
+<div align="center">
+<form method='post' action="{% url 'update_tours_info' %}" class="order_form">
+    {% csrf_token %}
+    <fieldset class="order_form" style="background-color: #D3D3D3; opacity: 0.9;">
+    <legend>Edit Tour</legend>
+    {{form.as_p }}
+    </fieldset>
+
+<p><input type="submit" value="Update" class="button"></p>
+</form>
+    </div>
+</body>
+</html>

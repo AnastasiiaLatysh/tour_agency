@@ -2,6 +2,7 @@ from django.db import connection
 from django.shortcuts import render
 
 from tours.forms import OrderTourForm
+from helpers.log import log
 
 
 class Basket(object):
@@ -11,7 +12,7 @@ class Basket(object):
         self.cursor = connection.cursor()
 
     def open_basket(self, request):
-        print("Open basket")
+        log.info("Open basket")
         self.cursor.execute("SELECT tour_id from basket")
         if self.cursor.fetchall():
             self.cursor.execute("SELECT nname, price FROM tours WHERE id in (SELECT tour_id from basket)")
@@ -24,7 +25,7 @@ class Basket(object):
             return render(request, "empty_basket.html")
 
     def add_to_basket(self, request):
-        print("Add basket")
+        log.info("Add to basket")
         chosen_tours = request.POST.getlist('chosen')
         for tour_name in chosen_tours:
             self.cursor.execute(f"SELECT id FROM tours WHERE nname='{tour_name}'")
@@ -33,6 +34,7 @@ class Basket(object):
         return self.open_basket(request)
 
     def delete_from_basket(self, request):
+        log.info("Delete from basket")
         self.cursor.execute(f"SELECT id FROM tours WHERE nname='{request.POST.get('tour_name')}'")
         tour_id = self.cursor.fetchall()[0][0]
         self.cursor.execute(f"DELETE FROM basket WHERE tour_id='{tour_id}'")

@@ -17,9 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^tours/', include('tours.urls')),
     url(r'^tours/', include('basket.urls')),
-    url(r'^tours/', include('user.urls'))
+    url(r'^tours/', include('user.urls')),
 ]

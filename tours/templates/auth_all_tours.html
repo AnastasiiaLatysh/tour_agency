@@ -6,15 +6,7 @@
 <body>
 <h1 align="center"> Hello!!! Let's choose tour of you dream ! </h1>
 <h2 align="center"> Available tours: </h2>
-<div align="center">
-    <a href="/tours/"><button class="button">All tours</button></a>
-</div>
-<div align="center">
-    <a href="/tours/bus/"><button class="button">Show Bus Tours</button></a>
-    <a href="/tours/plane/"><button class="button">Show Plane Tours</button></a>
-    <a href="/tours/train/"><button class="button">Show Train Tours</button></a>
-</div>
-<form method='post' action="{% url 'add_to_basket' %}">
+<form method='post' action="{% url 'edit_tour' %}">
     {% csrf_token %}
     <table>
     <tr>
@@ -39,16 +31,14 @@
 
     </table>
     <div align="center">
-        <input type="submit" value="Order tour" class="button">
+        <input type="submit" value="Edit tour" class="button">
     </div>
 </form>
 
 <div align="center">
-    <a href="/tours/admin/"><button class="button">Login</button></a>
-</div>
-
-<div class="backet">
-    <button><a href="basket"><img src="/static/tours/basket.png" width="100" height="100"/></a></button>
+<form action="{% url 'logout' %}" method='GET'>
+<a href="/tours/"><button class="button" type='submit'>Logout</button></a>
+</form>
 </div>
 </body>
 </html>
