@@ -1,7 +1,7 @@
 Django==2.2.1
 mysqlclient==1.4.2.post1
 pytz==2019.1
-sqlparse==0.3.0
+sqlparse==0.4.4
 Django==2.2.1
 django-tables2==2.0.6
 mock==3.0.5
@@ -10,5 +10,5 @@ numexpr==2.6.9
 numpy==1.16.4
 pytz==2019.1
 six==1.12.0
-sqlparse==0.3.0
+sqlparse==0.4.4
 tables==3.5.2
